@@ -130,14 +130,14 @@ bool save_board (const char *filename, char board[9][9]) {
 	ofstream out_stream;
 	out_stream.open(filename);
 	if (out_stream.fail())
-    return false;
-  for (int i=0; i<9; i++){
-  	for (int j=0; j<9; j++){
-  		out_stream.put(board[i][j]);
-  	}
-  	out_stream.put('\n');
-  }
-  out_stream.close();
+		return false;
+	for (int i=0; i<9; i++){
+		for (int j=0; j<9; j++){
+			out_stream.put(board[i][j]);
+		}
+		out_stream.put('\n');
+	}
+	out_stream.close();
 	return true;
 }
 
