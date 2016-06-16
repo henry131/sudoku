@@ -1,0 +1,42 @@
+Summarise your findings here (see specification).
+
+The solve_board function returned false when it was called with the 
+mystery2.dat board passed to it suggesting mystery2.dat is the 
+"impossible to solve" board. The other two boards were solved rapidly.
+
+The next test was to create a new function where the only difference
+was the addition of a pass-by-reference counter. Thus when the boards 
+were passed to the new function (solve_board_with_counter), there was a 
+method of tracking how many times the function is called during the
+recursion. The implication being that the more times the function had to
+be called, the more difficult the problem (within reasonable deviations).
+
+Here are the findings summarised (the easy.dat and medium.dat boards are
+included for point of reference):
+
+	Sudoku Board	Funtion Calls
+	============	=============
+	easy.dat			2172
+	medium.dat		15662
+	mystery1.dat	421547
+	mystery3.dat	14134
+
+The mystery1.dat board required far more function calls during the recursion
+while mystery3.dat had fewer function calls than the medium.dat board. This
+suggests that mystery1.dat is the "extremely hard" board meaning mystery3.dat
+must be the board considered "hard".
+
+Conclusion:
+	
+	Sudoku Board	Difficulty Description
+	============	======================
+	
+	mystery1.dat	"extremely hard"
+	
+	mystery2.dat	"impossible to solve"
+	
+	mystery3.dat	"hard"
+
+
+
+
